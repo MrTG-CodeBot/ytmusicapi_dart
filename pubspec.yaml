@@ -1,0 +1,17 @@
+name: dart_ytmusicapi
+description: Dart port of core pieces of ytmusicapi (OAuth, tokens, constants) to begin migration.
+version: 0.0.1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.2.1
+  crypto: ^3.0.3
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0
+
+
