@@ -4,8 +4,8 @@ import '../parsers/songs.dart' as psongs;
 import '../parsers/albums.dart' as palbums;
 
 mixin MusicMixin on YTMusicBase {
-  Future<Map<String, dynamic>> getSong(String videoId) async {
-    final body = {'videoId': videoId};
+  Future<Map<String, dynamic>> getSong(String videoId, {int? signatureTimestamp}) async {
+    final body = {'videoId': videoId, if (signatureTimestamp != null) 'signatureTimestamp': signatureTimestamp};
     final response = await sendRequest('player', body);
     return psongs.parseSong(response);
   }

@@ -115,16 +115,8 @@ Map<String, dynamic> parseSong(JsonDict data) {
     ]),
   };
 
-  final playabilityStatus = nav<String>(data, [
-    'playabilityStatus',
-    'status',
-  ]);
-  if (playabilityStatus == 'UNPLAYABLE') {
-    song['playabilityStatus'] = nav<String>(data, [
-      'playabilityStatus',
-      'reason',
-    ]);
-  }
+  song['playabilityStatus'] = nav<Map<String, dynamic>>(data, ['playabilityStatus']);
+  song['streamingData'] = nav<Map<String, dynamic>>(data, ['streamingData']);
 
   return song;
 }

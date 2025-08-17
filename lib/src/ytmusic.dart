@@ -5,7 +5,7 @@ import 'mixins/playlists_mixin.dart';
 import 'mixins/music_mixin.dart';
 import 'mixins/lyrics_mixin.dart';
 
-class YTMusic extends YTMusicBase with PlaylistsMixin, SearchMixin, LyricsMixin {
+class YTMusic extends YTMusicBase with PlaylistsMixin, SearchMixin, LyricsMixin, MusicMixin {
   YTMusic({
     super.auth,
     super.user,
